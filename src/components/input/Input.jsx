@@ -17,8 +17,10 @@ const Input = (props) => {
         type={type}
         id={name}
         placeholder={error.length > 0 ? '' : placeholder}
-        className={`w-full px-6 py-4 text-sm bg-gray-300 focus:bg-gray-100 dark:focus:bg-darkbg select-none transition-all duration-75 font-medium border outline-none border-strock rounded-xl text-text1 placeholder:text-text4 dark:placeholder:text-text2 dark:text-white dark:bg-darkbg ${
-          error.length > 0 ? 'border-error' : 'border-strock dark:border-darkStroke'
+        className={`w-full px-6 py-4 text-sm border dark:focus:bg-darkbg select-none transition-all duration-75 font-medium outline-none rounded-xl placeholder:text-text4 dark:placeholder:text-text2 dark:text-white dark:bg-darkbg ${
+          error.length > 0
+            ? 'border-error text-error'
+            : 'border-strock dark:border-darkStroke text-text1'
         } ${children ? 'pr-16' : ''}`}
         {...rest}
         {...field}

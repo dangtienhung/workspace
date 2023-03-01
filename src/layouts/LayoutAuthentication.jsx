@@ -17,7 +17,7 @@ const LayoutAuthentication = (props) => {
         <img srcSet="/logo.png 2x" alt="crounfunding-app" />
       </Link>
       <div className="w-full max-w-[556px] bg-white dark:bg-darkbg mx-auto rounded-xl px-5 py-8 lg:px-16 lg:py-12">
-        <h1 className="font-semibold lg:text-xl text-lg mb-1 lg:mb-3 text-text1 text-center dark:text-white">
+        <h1 className="capitalize font-semibold lg:text-xl text-lg mb-1 lg:mb-3 text-text1 text-center dark:text-white">
           {heading}
         </h1>
         {children}
