@@ -2,7 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 @layer base {
-	body {
-		@apply font-body text-base;
-	}
+  body {
+    @apply font-body text-base;
+  }
+  input {
+    @apply outline-none;
+  }
+  input:focus + .error-input {
+    display: none;
+  }
 }
