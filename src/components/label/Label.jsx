@@ -2,21 +2,21 @@ import PropTypes from 'prop-types';
 import React from 'react';
 
 const Label = (props) => {
-	const { children, htmlFor = '', className = '' } = props;
-	return (
-		<label
-			htmlFor={htmlFor}
-			className={`text-sm capitalize font-medium cursor-pointer text-text2 ${className}`}
-		>
-			{children}
-		</label>
-	);
+  const { children, htmlFor = '', className = '' } = props;
+  return (
+    <label
+      htmlFor={htmlFor}
+      className={`text-sm capitalize font-medium cursor-pointer text-text2 dark:text-text3 ${className}`}
+    >
+      {children}
+    </label>
+  );
 };
 
 Label.propTypes = {
-	children: PropTypes.node,
-	htmlFor: PropTypes.string,
-	className: PropTypes.string,
+  children: PropTypes.node,
+  htmlFor: PropTypes.string,
+  className: PropTypes.string,
 };
 
 export default Label;

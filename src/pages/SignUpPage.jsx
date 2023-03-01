@@ -28,14 +28,6 @@ const SignUpPage = () => {
   const handleSignUp = (values) => {
     console.log('🚀 ~ file: SignUpPage.jsx:26 ~ SignUpPage ~ values:', values);
   };
-  // const [accessTerm, setAccessTerm] = useState(false);
-  // const [showPassword, setShowPassword] = useState(false);
-  // const handleToggleTerm = () => {
-  //   setAccessTerm(!accessTerm);
-  // };
-  // const handleTogglePassword = () => {
-  //   setShowPassword(!showPassword);
-  // };
   const { value: accessTerm, handleToogleValue: handleToggleTerm } = useToogleValue();
   const { value: showPassword, handleToogleValue: handleTogglePassword } = useToogleValue();
   return (
@@ -46,11 +38,11 @@ const SignUpPage = () => {
           Sign in
         </Link>
       </p>
-      <button className="flex items-center justify-center w-full py-3 mb-5 text-base font-semibold border rounded-lg outline-none gap-x-3 border-strock text-text2">
+      <button className="flex items-center justify-center w-full py-3 mb-5 text-base font-semibold border rounded-lg outline-none gap-x-3 border-strock dark:border-darkStroke text-text2 dark:text-white">
         <img srcSet="/icon-google.png 2x" alt="icon-google" />
         <span className="capitalize">sign up with google</span>
       </button>
-      <p className="mb-4 text-xs font-normal text-center capitalize lg:text-sm lg:mg-8 text-text2">
+      <p className="mb-4 text-xs font-normal text-center capitalize lg:text-sm lg:mg-8 text-text2 dark:text-white">
         or sign up with email
       </p>
       <form onSubmit={handleSubmit(handleSignUp)} autoComplete="off">
@@ -86,7 +78,7 @@ const SignUpPage = () => {
         </FormGroup>
         <div className="flex items-start gap-x-5 mb-5">
           <CheckBox name="term" checked={accessTerm} onClick={handleToggleTerm}>
-            <p className="font-nomal text-sm text-text2 flex-1">
+            <p className="font-nomal text-sm text-text2 dark:text-text3 flex-1">
               I agree to the <span className="text-secondary underline">Tearms of Use</span> and
               have read and understand the{' '}
               <span className="text-secondary underline">Privacy policy</span>.

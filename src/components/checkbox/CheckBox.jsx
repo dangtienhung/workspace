@@ -5,12 +5,12 @@ const CheckBox = ({ checked = false, onClick = () => {}, name = '', children }) 
     <div className="flex items-start gap-x-5">
       <div
         className={`inline-flex justify-center items-center text-white p-1 h-5 w-5 rounded border ${
-          checked ? 'bg-primary border-primary' : 'border-strock '
+          checked ? 'bg-primary border-primary' : 'border-strock dark:border-text3'
         }`}
         onClick={onClick}
       >
         <input type="checkbox" name={name} id="" className="hidden" onChange={() => {}} />
-        <span>
+        <span className={`${checked ? '' : 'opacity-0 visible'}`}>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
