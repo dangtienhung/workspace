@@ -5,6 +5,7 @@ export { default as CheckBox } from './checkbox/CheckBox';
 export { default as ButtonGoogle } from './button/ButtonGoogle';
 export { default as Heading } from './common/Heading';
 export { default as Gap } from './common/Gap';
+export { default as Overlay } from './common/Overlay';
 
 /* icon */
 export { default as IconToggle } from './icons/IconToggle';

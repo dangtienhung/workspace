@@ -3,7 +3,11 @@
 @tailwind utilities;
 @layer base {
   body {
-    @apply font-body text-base;
+    @apply font-body text-base mx-auto;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    max-width: 1440px;
   }
   input {
     @apply outline-none;
