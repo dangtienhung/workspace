@@ -6,6 +6,8 @@ export { default as ButtonGoogle } from './button/ButtonGoogle';
 export { default as Heading } from './common/Heading';
 export { default as Gap } from './common/Gap';
 export { default as Overlay } from './common/Overlay';
+export { default as FormRow } from './common/FormRow';
+export { default as FormGroup } from './common/FormGroup';
 
 /* icon */
 export { default as IconToggle } from './icons/IconToggle';
