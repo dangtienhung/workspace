@@ -69,7 +69,7 @@ const SignInPage = () => {
             </span>
           </div>
         </FormGroup>
-        <Button className="bg-primary w-full capitalize" type="submit">
+        <Button className="bg-primary w-full capitalize" kind="primary" type="submit">
           Sign in
         </Button>
       </form>

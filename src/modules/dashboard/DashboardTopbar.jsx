@@ -1,20 +1,23 @@
 import { Button } from 'components';
 import DashboardFundrising from './DashboardFundrising';
 import DashboardSearch from './DashboardSearch';
+import { Link } from 'react-router-dom';
 import React from 'react';
 
 const DashboardTopbar = () => {
   return (
     <div className="flex items-center justify-between mb-8">
       <div className="flex items-center flex-1 gap-x-10">
-        <img srcSet="/logo.png 2x" alt="logo" />
+        <Link to={'/'} className="inline-block">
+          <img srcSet="/logo.png 2x" alt="logo" />
+        </Link>
         <div className="w-full max-w-[458px]">
           <DashboardSearch />
         </div>
       </div>
       <div className="flex items-center justify-end gap-x-10 flex-1">
         <DashboardFundrising />
-        <Button className="bg-secondary capitalize px-7" type="button">
+        <Button className="capitalize px-7" type="button" kind="secondary" href="/start-campaign">
           start a camping
         </Button>
         <img
