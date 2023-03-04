@@ -20,3 +20,4 @@ export { default as IconProfile } from './icons/IconProfile';
 export { default as IconLogout } from './icons/IconLogout';
 export { default as IconDarkmode } from './icons/IconDarkmode';
 export { default as IconFolder } from './icons/IconFolder';
+export { default as IconClose } from './icons/IconClose';
