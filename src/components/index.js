@@ -9,6 +9,7 @@ export { default as Overlay } from './common/Overlay';
 export { default as FormRow } from './common/FormRow';
 export { default as FormGroup } from './common/FormGroup';
 export { default as Textarea } from './input/Textarea';
+export { default as Term } from './term/Term';
 
 /* icon */
 export { default as IconToggle } from './icons/IconToggle';
