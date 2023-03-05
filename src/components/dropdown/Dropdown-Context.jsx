@@ -5,7 +5,6 @@ const DropDownContext = createContext();
 function DropdownProvider(props) {
   const [show, setShow] = useState(false);
   const toggle = () => {
-    console.log(123);
     setShow(!show);
   };
   const values = { show, setShow, toggle };

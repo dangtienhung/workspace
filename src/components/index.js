@@ -10,6 +10,7 @@ export { default as FormRow } from './common/FormRow';
 export { default as FormGroup } from './common/FormGroup';
 export { default as Textarea } from './input/Textarea';
 export { default as Term } from './term/Term';
+export { default as ImageUpload } from './image/ImageUpload';
 
 /* icon */
 export { default as IconToggle } from './icons/IconToggle';
@@ -22,3 +23,4 @@ export { default as IconLogout } from './icons/IconLogout';
 export { default as IconDarkmode } from './icons/IconDarkmode';
 export { default as IconFolder } from './icons/IconFolder';
 export { default as IconClose } from './icons/IconClose';
+export { default as IconUpload } from './icons/IconUpload';

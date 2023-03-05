@@ -2,7 +2,6 @@ import React from 'react';
 import { useDropdown } from './Dropdown-Context';
 
 const Option = (props) => {
-  console.log('🚀 ~ file: Option.jsx:5 ~ Option ~ props:', props);
   const { onClick } = props;
   const { setShow } = useDropdown();
   const handleClick = () => {

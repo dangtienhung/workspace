@@ -19,7 +19,7 @@ const SignInPage = () => {
   const {
     handleSubmit,
     control,
-    formState: { isValid, isSubmitting, errors },
+    formState: { errors },
   } = useForm({
     resolver: yupResolver(schema),
     mode: 'onSubmit',

@@ -62,3 +62,34 @@
 .scrooll-hidden::-webkit-scrollbar {
   display: none;
 }
+
+/* custom date picker */
+body .react-date-picker {
+  @apply w-full px-6 py-4 text-sm border dark:focus:bg-darkbg select-none transition-all duration-75 font-medium outline-none rounded-xl placeholder:text-text4 dark:placeholder:text-text2 dark:text-white dark:bg-darkbg cursor-pointer;
+  height: 54px;
+  .react-date-picker__wrapper {
+    @apply border-none;
+  }
+  .react-date-picker__button {
+    @apply hidden;
+  }
+}
+
+body .react-date-picker__calendar {
+  .react-date-picker__calendar .react-calendar {
+    @apply border-none shadow rounded-lg;
+  }
+  .react-calendar__navigation button:enabled:hover,
+  .react-calendar__navigation button:enabled:focus {
+    @apply bg-transparent;
+  }
+  .react-calendar__tile:not(.react-calendar__tile--active):enabled:hover,
+  .react-calendar__tile:not(.react-calendar__tile--active):enabled:focus {
+    @apply bg-transparent text-primary;
+  }
+  .react-calendar__tile--now,
+  .react-calendar__tile--active,
+  .react-calendar__tile--active:hover {
+    @apply bg-primary text-white rounded-lg;
+  }
+}
