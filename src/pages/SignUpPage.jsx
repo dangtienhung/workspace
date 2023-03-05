@@ -6,12 +6,14 @@ import FormGroup from 'components/common/FormGroup';
 import LayoutAuthentication from 'layouts/LayoutAuthentication';
 import { Link } from 'react-router-dom';
 import React from 'react';
+import { authRegister } from 'store/auth/auth-slice';
+import { useDispatch } from 'react-redux';
 import { useForm } from 'react-hook-form';
 import useToogleValue from 'hooks/useToogleValue';
 import { yupResolver } from '@hookform/resolvers/yup';
 
 const schema = yup.object({
-  username: yup.string().required('This field is required!'),
+  name: yup.string().required('This field is required!'),
   email: yup.string().email('Invalid email address').required('This field is required!'),
   password: yup.string().required('This field is required!').min(8, 'Password must be 8 character'),
 });
@@ -20,13 +22,20 @@ const SignUpPage = () => {
   const {
     handleSubmit,
     control,
+    reset,
     formState: { errors },
   } = useForm({
     resolver: yupResolver(schema),
     mode: 'onSubmit',
   });
-  const handleSignUp = (values) => {
-    console.log('🚀 ~ file: SignUpPage.jsx:26 ~ SignUpPage ~ values:', values);
+  const dispath = useDispatch();
+  const handleSignUp = async (values) => {
+    try {
+      dispath(authRegister(values));
+      reset({});
+    } catch (error) {
+      console.log(error);
+    }
   };
   const { value: accessTerm, handleToogleValue: handleToggleTerm } = useToogleValue();
   const { value: showPassword, handleToogleValue: handleTogglePassword } = useToogleValue();
@@ -50,9 +59,9 @@ const SignUpPage = () => {
           <Label htmlFor="name">Full Name*</Label>
           <Input
             control={control}
-            name="username"
+            name="name"
             placeholder="Username"
-            error={errors?.username?.message}
+            error={errors?.name?.message}
           />
         </FormGroup>
         <FormGroup>
